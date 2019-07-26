@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NameApplication<name>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demo.NameApplication",
+            "projectName": "name",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GreetingApplication<greeting>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demo.GreetingApplication",
+            "projectName": "greeting",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebApplication<web>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demo.WebApplication",
+            "projectName": "web",
+            "args": ""
+        }
+    ]
+}
