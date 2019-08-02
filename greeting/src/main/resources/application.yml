@@ -1,7 +1,4 @@
-server:
-  port: 9090
-greeting: Hello
-greetings:
-  EN: Hello
-  ES: Hola
-  DE: Hallo
+spring:
+  application:
+    name: greeting
+# gives a name to service (along with the EnableDiscoveryClient annotation in GreetingApplication.java), also identifies the name of the external configuration file - greeting.yml

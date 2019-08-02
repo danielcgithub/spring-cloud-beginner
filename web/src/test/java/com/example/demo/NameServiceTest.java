@@ -9,6 +9,8 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import com.example.demo.NameService.NameFeignClient;
+
 /**
  * @author Ryan Baxter
  */
@@ -16,9 +18,9 @@ public class NameServiceTest {
 
 	@Test
 	public void getNameTest() throws Exception {
-		RestTemplate rest = mock(RestTemplate.class);
-		doReturn("Ryan").when(rest).getForObject(eq("http://localhost:7070"), eq(String.class));
-		NameService nameService = new NameService(rest);
+		NameService.NameFeignClient nameFeignClient = mock(NameFeignClient.class);
+		doReturn("Ryan").when(nameFeignClient).getName();
+		NameService nameService = new NameService(nameFeignClient);
 		String name = nameService.getName();
 		assertEquals(name, "Ryan");
 	}

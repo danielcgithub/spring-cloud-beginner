@@ -25,8 +25,8 @@ public class WebController {
 	@RequestMapping
 	public String index(HttpServletRequest request) {
 		String locale = RequestContextUtils.getLocaleResolver(request).resolveLocale(request).toLanguageTag();
-		String greeting =  new StringBuilder().append(greetingService.getGreeting(locale)).
-				append(" ").append(nameService.getName()).toString();
+		String greeting = new StringBuilder().append(greetingService.getGreeting(locale)).append(" ")
+				.append(nameService.getName()).toString();
 		LOG.info("Greeting: " + greeting);
 		LOG.info("Locale: " + locale);
 		return greeting;

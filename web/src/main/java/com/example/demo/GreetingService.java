@@ -8,7 +8,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @Service
 public class GreetingService {
-	private static final String URL = "http://localhost:9090";
+	private static final String URL = "http://greeting"; // using eureka service discovery to find the greeting service
+															// (interceptor)
 	private RestTemplate rest;
 
 	public GreetingService(RestTemplate rest) {
