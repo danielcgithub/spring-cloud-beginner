@@ -5,6 +5,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * @author Ryan Baxter
+ * 
+ *         This class is just reading from the properties file in resources
+ * 
+ * 
  */
 @ConfigurationProperties()
 public class GreetingProperties {

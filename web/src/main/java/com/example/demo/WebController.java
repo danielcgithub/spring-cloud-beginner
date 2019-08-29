@@ -8,6 +8,11 @@ import org.springframework.web.servlet.support.RequestContextUtils;
 
 /**
  * @author Ryan Baxter
+ * 
+ *         root endpoint tries to resolve locale from the accept language header
+ *         of request call to greeting service with locale to get greeting call
+ *         to name service to get name append together and return that
+ * 
  */
 @RestController
 public class WebController {

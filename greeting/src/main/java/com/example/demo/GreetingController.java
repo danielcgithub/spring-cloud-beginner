@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Ryan Baxter
+ * 
+ *         Controller with 2 endpoints root / endpoint returns default greeting
+ *         from the greeting props. /{languageCode} endpoint, returns based on
+ *         locale
+ * 
  */
 @RestController
 public class GreetingController {
@@ -19,14 +24,15 @@ public class GreetingController {
 	}
 
 	@RequestMapping("/{languageCode}")
-	public String getGreeting(@PathVariable String languageCode){
+	public String getGreeting(@PathVariable String languageCode) {
 		LOG.info("Language Code: " + languageCode);
 		LOG.info("Greeting: " + greetingProperties.getGreetings().get(languageCode.toUpperCase()));
-		return greetingProperties.getGreetings().getOrDefault(languageCode.toUpperCase(), greetingProperties.getGreeting());
+		return greetingProperties.getGreetings().getOrDefault(languageCode.toUpperCase(),
+				greetingProperties.getGreeting());
 	}
 
 	@RequestMapping("/")
-	public String getGreeting(){
+	public String getGreeting() {
 		LOG.info("Greeting: " + greetingProperties.getGreeting());
 		return greetingProperties.getGreeting();
 	}

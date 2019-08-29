@@ -8,6 +8,9 @@ import org.springframework.cloud.sleuth.Sampler;
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * @EnableDiscoveryClient annotation - auto registers service with eureka
+ */
 @SpringBootApplication
 @EnableConfigurationProperties(GreetingProperties.class)
 @EnableDiscoveryClient

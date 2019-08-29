@@ -20,9 +20,9 @@ public class GreetingServiceTest {
 	@Before
 	public void setup() {
 		RestTemplate rest = mock(RestTemplate.class);
-		doReturn("Hello").when(rest).getForObject(eq("http://localhost:9090"), eq(String.class));
-		doReturn("Hello").when(rest).getForObject(eq("http://localhost:9090/en"), eq(String.class));
-		doReturn("Hola").when(rest).getForObject(eq("http://localhost:9090/es"), eq(String.class));
+		doReturn("Hello").when(rest).getForObject(eq("http://greeting"), eq(String.class));
+		doReturn("Hello").when(rest).getForObject(eq("http://greeting/en"), eq(String.class));
+		doReturn("Hola").when(rest).getForObject(eq("http://greeting/es"), eq(String.class));
 		greetingService = new GreetingService(rest);
 	}
 
