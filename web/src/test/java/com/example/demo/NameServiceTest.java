@@ -1,15 +1,12 @@
 package com.example.demo;
 
-import org.junit.Test;
-import org.springframework.web.client.RestTemplate;
-
-import static org.junit.Assert.*;
-import static org.mockito.Matchers.eq;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 import com.example.demo.NameService.NameFeignClient;
+
+import org.junit.Test;
 
 /**
  * @author Ryan Baxter
